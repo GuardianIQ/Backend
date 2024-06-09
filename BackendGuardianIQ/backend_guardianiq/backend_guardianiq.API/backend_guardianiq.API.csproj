@@ -15,4 +15,10 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Devices\Application\Internal\" />
+      <Folder Include="Devices\Domain\" />
+      <Folder Include="Devices\Infrastructure\Persistence\EFC\Repositories\" />
+    </ItemGroup>
+
 </Project>
