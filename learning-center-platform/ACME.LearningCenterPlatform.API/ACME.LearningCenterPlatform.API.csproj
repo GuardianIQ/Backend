@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Dependency Injection related packages -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
+    <!-- EntityFrameworkCore Database Persistence related packages -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
+    <!-- MySQL Database Persistence related packages -->
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.2" />
+    <!-- Audit Trails related packages -->
+    <PackageReference Include="EntityFrameworkCore.CreatedUpdatedDate" Version="8.0.0" />
+    <!-- Naming convention conversion related packages -->
+    <PackageReference Include="Humanizer" Version="2.14.1" />
+    <!-- OpenAPI Documentation related packages -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.6.2"/>
+    <!-- BCrypt Encription related packages -->
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3"/>
+    <!-- JSON Web Tokens related packages -->
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6"/>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.0"/>
+  </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Publishing\Application\Internal\CommandServices\" />
+      <Folder Include="Publishing\Application\Internal\QueryServices\" />
+      <Folder Include="Publishing\Domain\Model\Aggregates\" />
+      <Folder Include="Publishing\Domain\Model\Commands\" />
+      <Folder Include="Publishing\Domain\Model\Entities\" />
+      <Folder Include="Publishing\Domain\Model\Queries\" />
+      <Folder Include="Publishing\Domain\Model\ValueObjects\" />
+      <Folder Include="Publishing\Domain\Repositories\" />
+      <Folder Include="Publishing\Domain\Services\" />
+      <Folder Include="Publishing\Infrastructure\Persistence\EFC\Repositories\" />
+      <Folder Include="Shared\Domain\Repositories\" />
+      <Folder Include="Shared\Infrastructure\Interfaces\ASP\Configuration\Extensions\" />
+      <Folder Include="Shared\Infrastructure\Persistence\EFC\Configuration\Extensions\" />
+      <Folder Include="Shared\Infrastructure\Persistence\EFC\Repositories\" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,4 @@
+
+Vcsharpsquid:S112-"5'System.Exception' should not be thrown by user code.(÷¼×ıÿÿÿÿ
+Qcsharpsquid:S1123"5'System.Exception' should not be thrown by user code.(¼şî»
+xcsharpsquid:S6608)"VIndexing at Count-1 should be used instead of the "Enumerable" extension method "Last"(Âçáãøÿÿÿÿ
