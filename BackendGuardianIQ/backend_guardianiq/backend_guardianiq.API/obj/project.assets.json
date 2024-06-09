@@ -3113,24 +3113,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/astridbh/.nuget/packages/": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/astridbh/Documents/Apps web/Semana 10/backend_guardianiq/backend_guardianiq.API/backend_guardianiq.API.csproj",
+      "projectUniqueName": "E:\\webtrabajo\\repsositorio\\Backend\\BackendGuardianIQ\\backend_guardianiq\\backend_guardianiq.API\\backend_guardianiq.API.csproj",
       "projectName": "backend_guardianiq.API",
-      "projectPath": "/Users/astridbh/Documents/Apps web/Semana 10/backend_guardianiq/backend_guardianiq.API/backend_guardianiq.API.csproj",
-      "packagesPath": "/Users/astridbh/.nuget/packages/",
-      "outputPath": "/Users/astridbh/Documents/Apps web/Semana 10/backend_guardianiq/backend_guardianiq.API/obj/",
+      "projectPath": "E:\\webtrabajo\\repsositorio\\Backend\\BackendGuardianIQ\\backend_guardianiq\\backend_guardianiq.API\\backend_guardianiq.API.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "E:\\webtrabajo\\repsositorio\\Backend\\BackendGuardianIQ\\backend_guardianiq\\backend_guardianiq.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/astridbh/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3193,7 +3195,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\pc\\.dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
