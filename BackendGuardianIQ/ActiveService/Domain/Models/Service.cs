@@ -2,7 +2,7 @@ using System.Runtime.InteropServices.JavaScript;
 
 namespace backend_guardianiq.API.ActiveService.Domain.Models;
 
-public class Service
+public class Servic
 {
     public int Id { get; set; }
     public string Name { get; set; }
