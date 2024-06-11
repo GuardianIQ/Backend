@@ -9,3 +9,5 @@ Q
 !backend_guardianiq.API/Program.cs,e\e\ee1d3395468a62fb335ed9f53d5af81802b9e392
 ~
 Nbackend_guardianiq.API/ActiveService/Domain/Repositories/IServiceRepository.cs,d\b\dbf7dac4e60f0f00fe07be40e31475010dc09430
+o
+?backend_guardianiq.API/PersonalSafety/Domain/Models/Personal.cs,d\b\db698600802e478faab154f17be39a0edddd0c15
