@@ -15,4 +15,10 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Devices\Application\" />
+      <Folder Include="Devices\Domain\" />
+      <Folder Include="PersonalSafety\Domain\" />
+    </ItemGroup>
+
 </Project>
