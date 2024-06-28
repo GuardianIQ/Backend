@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("backend_guardianiq.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2577ec194432db934dadbb0aa256049c756d507d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af6d1fe6bc8f7ed5f51a80d0ec883c092264cf28")]
 [assembly: System.Reflection.AssemblyProductAttribute("backend_guardianiq.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("backend_guardianiq.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -45,6 +45,13 @@ public class PersonalSafetyService : IPersonalSafetyService
         }
 
         existingPersonal.Name = personal.Name;
+        existingPersonal.District = personal.District;
+        existingPersonal.Age = personal.Age;
+        existingPersonal.Sex = personal.Sex;
+        existingPersonal.Experience = personal.Experience;
+        existingPersonal.Avality = personal.Avality;
+        existingPersonal.Contract = personal.Contract;
+        existingPersonal.Photo = personal.Photo;
 
         try
         {
@@ -77,5 +84,9 @@ public class PersonalSafetyService : IPersonalSafetyService
         {
             throw new Exception($"An error occurred while deleting the personal: {e.Message}", e);
         }
+    }
+    public async Task<Personal> FindByIdAsync(int id)
+    {
+        return await _personalsafetyRepository.FindByIdAsync(id);
     }
 }

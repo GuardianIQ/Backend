@@ -24,6 +24,7 @@ public class PersonalSafetyController : ControllerBase
     }
 
     [HttpPost]
+    [ActionName(nameof(PostAsync))]
     public async Task<ActionResult<Personal>> PostAsync([FromBody] Personal personal)
     {
         if (!ModelState.IsValid)
@@ -34,32 +35,7 @@ public class PersonalSafetyController : ControllerBase
         try
         {
             var createdPersonal = await _personalsafetyService.SaveAsync(personal);
-            return CreatedAtAction(nameof(GetAllAsync), createdPersonal);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, $"An error occurred: {ex.Message}");
-        }
-    }
-
-    [HttpPut("{id}")]
-    public async Task<ActionResult<Personal>> PutAsync(int id, [FromBody] Personal personal)
-    {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
-
-        try
-        {
-            var updatedPersonal = await _personalsafetyService.UpdateAsync(id, personal);
-
-            if (updatedPersonal == null)
-            {
-                return NotFound();
-            }
-
-            return updatedPersonal;
+            return CreatedAtAction(nameof(PostAsync), new { id = createdPersonal.Id }, createdPersonal);
         }
         catch (Exception ex)
         {
@@ -86,4 +62,14 @@ public class PersonalSafetyController : ControllerBase
             return StatusCode(500, $"An error occurred: {ex.Message}");
         }
     }
+
+    [HttpGet("{id}")]
+        public async Task<IActionResult> GetByIdAsync(int id)
+        {
+            var device = await _personalsafetyService.FindByIdAsync(id);
+
+            if (device == null)
+                return NotFound();
+            return Ok(device);
+        }
 }
