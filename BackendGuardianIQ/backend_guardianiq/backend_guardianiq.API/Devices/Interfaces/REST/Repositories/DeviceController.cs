@@ -21,8 +21,9 @@ public class DeviceController : ControllerBase
         var device = await _deviceService.ListAsync();
         return device;
     }
-
+    
     [HttpPost]
+    [ActionName(nameof(PostAsync))]
     public async Task<ActionResult<Device>> PostAsync([FromBody] Device device)
     {
         if (!ModelState.IsValid)
@@ -33,7 +34,9 @@ public class DeviceController : ControllerBase
         try
         {
             var createdDevice = await _deviceService.SaveAsync(device);
-            return CreatedAtAction(nameof(GetAllAsync), createdDevice);
+            return CreatedAtAction(nameof(PostAsync), new { id = createdDevice.Id }, createdDevice);
+            //return Ok(createdDevice);
+
         }
         catch (Exception ex)
         {
@@ -78,11 +81,21 @@ public class DeviceController : ControllerBase
                 return NotFound();
             }
 
-            return NoContent();
+
+            return StatusCode(StatusCodes.Status200OK, new { message = "Se borro" });
         }
         catch (Exception ex)
         {
             return StatusCode(500, $"An error occurred: {ex.Message}");
         }
+    }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetByIdAsync(int id)
+    {
+        var device = await _deviceService.FindByIdAsync(id);
+
+        if (device == null)
+            return NotFound();
+        return Ok(device);
     }
 }

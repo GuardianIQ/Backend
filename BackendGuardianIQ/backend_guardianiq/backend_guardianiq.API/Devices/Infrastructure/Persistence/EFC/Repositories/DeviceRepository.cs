@@ -4,7 +4,7 @@ using backend_guardianiq.API.Shared.Infrastructure.Persistence.EFC.Configuration
 using backend_guardianiq.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace backend_guardianiq.API.Devices.Interfaces.REST.Repositories;
+namespace backend_guardianiq.API.Devices.Infrastructure.Persistence.EFC.Repositories;
 
 public class DeviceRepository : BaseRepository, IDeviceRepository
 {
@@ -22,7 +22,7 @@ public class DeviceRepository : BaseRepository, IDeviceRepository
         await _context.Device.AddAsync(device);
     }
 
-    public async Task<Device> FindByIdAsync(int id)
+    public async Task<Device?> FindByIdAsync(int id)
     {
         return await _context.Device.FindAsync(id);
     }

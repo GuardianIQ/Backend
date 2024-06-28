@@ -82,4 +82,9 @@ public class DeviceService: IDeviceService
             throw new Exception($"An error occurred while deleting the device: {e.Message}", e);
         }
     }
+
+    public async Task<Device> FindByIdAsync(int id)
+    {
+        return await _deviceRepository.FindByIdAsync(id);
+    }
 }

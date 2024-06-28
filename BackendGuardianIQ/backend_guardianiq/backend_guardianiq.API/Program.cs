@@ -8,6 +8,7 @@ using backend_guardianiq.API.ActiveService.Domain.Services;
 using backend_guardianiq.API.Devices.Application.Internal;
 using backend_guardianiq.API.Devices.Domain.Repositories;
 using backend_guardianiq.API.Devices.Domain.Services;
+using backend_guardianiq.API.Devices.Infrastructure.Persistence.EFC.Repositories;
 using backend_guardianiq.API.Devices.Interfaces.REST.Repositories;
 using backend_guardianiq.API.PersonalSafety.Application.Internal;
 using backend_guardianiq.API.PersonalSafety.Domain.Repositories;
