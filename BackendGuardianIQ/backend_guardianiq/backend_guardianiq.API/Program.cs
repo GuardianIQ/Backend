@@ -14,6 +14,11 @@ using backend_guardianiq.API.PersonalSafety.Application.Internal;
 using backend_guardianiq.API.PersonalSafety.Domain.Repositories;
 using backend_guardianiq.API.PersonalSafety.Domain.Services;
 using backend_guardianiq.API.PersonalSafety.Infrastructure.Persistence.EFC.Repositories;
+using backend_guardianiq.API.Profiles.Application.Internal.CommandServices;
+using backend_guardianiq.API.Profiles.Application.Internal.QueryServices;
+using backend_guardianiq.API.Profiles.Domain.Repositories;
+using backend_guardianiq.API.Profiles.Domain.Services;
+using backend_guardianiq.API.Profiles.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,6 +55,8 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddScoped<ServiceService>();
 builder.Services.AddScoped<DeviceService>();
 builder.Services.AddScoped<PersonalSafetyService>();
+builder.Services.AddScoped<ProfileQueryService>();
+builder.Services.AddScoped<ProfileCommandService>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
@@ -59,6 +66,9 @@ builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();
 builder.Services.AddScoped<IDeviceService, DeviceService>();
 builder.Services.AddScoped<IPersonalSafetyRepository, PersonalSafetyRepository>();
 builder.Services.AddScoped<IPersonalSafetyService, PersonalSafetyService>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IProfileCommandService, ProfileCommandService>();
+builder.Services.AddScoped<IProfileQueryService, ProfileQueryService>();
 
 var app = builder.Build();
 
