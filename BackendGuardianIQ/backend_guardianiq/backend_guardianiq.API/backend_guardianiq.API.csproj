@@ -18,9 +18,6 @@
     <ItemGroup>
       <Folder Include="Devices\Application\" />
       <Folder Include="Devices\Domain\" />
-      <Folder Include="IAM\Application\Internal\CommandServices\" />
-      <Folder Include="IAM\Application\Internal\QueryServices\" />
-      <Folder Include="IAM\Infrastructure\Persistence\EFC\Repositories\" />
       <Folder Include="IAM\Interfaces\REST\Resources\" />
       <Folder Include="IAM\Interfaces\REST\Transform\" />
       <Folder Include="PersonalSafety\Domain\" />
