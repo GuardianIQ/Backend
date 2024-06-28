@@ -23,6 +23,7 @@ public class ServiceController : ControllerBase
     }
 
     [HttpPost]
+    [ActionName(nameof(PostAsync))]
     public async Task<ActionResult<Service>> PostAsync([FromBody] Service service)
     {
         if (!ModelState.IsValid)
@@ -33,7 +34,7 @@ public class ServiceController : ControllerBase
         try
         {
             var createdService = await _serviceService.SaveAsync(service);
-            return CreatedAtAction(nameof(GetAllAsync), createdService);
+            return CreatedAtAction(nameof(PostAsync), createdService);
         }
         catch (Exception ex)
         {
